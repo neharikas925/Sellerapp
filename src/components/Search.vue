@@ -23,12 +23,13 @@ export default {
         return {
             image: '@/assets/1511.jpg',
             word: "",
-            frequent: [],
         }
     },
     methods: {
         searchFun: function () {
             let word = this.word;
+            this.$store.state.frequent.push(word);
+            console.log(this.$store.state.frequent);
             this.word = "";
             this.$router.push({ path: `/result/${word}` });
         }

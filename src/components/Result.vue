@@ -56,7 +56,7 @@
                 <br>
                 <p class="head">Frequent Words</p>
                 <div class="flex-container">
-                    <div v-for="word in words" :key="word" class="tag">{{word}}</div>
+                    <div v-for="word in frequent" :key="word" class="tag">{{word}}</div>
                 </div>
                 <br>
                 <p class="head">Relevant Products</p>
@@ -72,33 +72,22 @@
 
 <script>
 export default {
+    computed: {
+        frequent() {
+            return this.$store.state.frequent;
+        }
+    },
     data() {
         return {
             number: 12313,
-            words: ['hey', 'hello', 'spinner', 'waka-waka'],
             words1: [],
             words2: [],
-            frequent: [],
             products: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         }
     },
     methods: {
         fun: function() {
-            console.log(this.words1);
-            this.word2 = [{name: 'hey', color: 'yellow'}]
             let data = {};
-            let keyword = this.$route.params.id;
-            let isPresent = false;
-            for(let i = 0; i < this.frequent.length; i++) {
-                if(this.frequent[i] === keyword) {
-                    isPresent = true;
-                    break;
-                }
-            }
-            if(!isPresent) {
-                this.frequent.push(keyword);
-            }
-            console.log(this.frequent);
             this.$http
                 .post('http://demo8971001.mockable.io/getKeywords', data)
                 .then(response => {

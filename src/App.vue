@@ -2,14 +2,12 @@
   <div id="app">
     <Search />
     <router-view/>
-    <HelloWorld/>
     <Info />
     <About />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Search from './components/Search.vue'
 import Info from './components/Info.vue'
 import About from './components/About.vue'
@@ -17,7 +15,7 @@ import About from './components/About.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld, Search, Info, About
+    Search, Info, About
   },
 }
 </script>

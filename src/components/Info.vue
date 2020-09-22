@@ -18,7 +18,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcolaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit involuptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatatnon proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
+
         <p id="extra">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor lidgi woih?</p>
+        
         <div class="flex-container">
             <div class="faq">
                 <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h5>
@@ -68,6 +70,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
 }
+
 .faq {
     width: 50%;
     padding: 20px 60px;
